@@ -9,6 +9,7 @@ object Dependencies {
     // Scala (test only)
     val specs2           = "4.10.5"
     val scalaCheck       = "1.15.1"
+    val scalaTest        = "3.2.9"
   }
 
   // Scala
@@ -16,6 +17,7 @@ object Dependencies {
     "io.circe"                   %% "circe-parser"         % V.circe,
     "org.http4s"                 %% "http4s-dsl"           % V.http4s,
 
+    "org.scalatest"              %% "scalatest"            % V.scalaTest      % Test,
     "org.specs2"                 %% "specs2-core"          % V.specs2         % Test,
     "org.specs2"                 %% "specs2-scalacheck"    % V.specs2         % Test,
     "org.scalacheck"             %% "scalacheck"           % V.scalaCheck     % Test

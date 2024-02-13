@@ -3,7 +3,7 @@ lazy val root = project.in(file("."))
     name := "otusbats",
     version := "0.1.0-rc1",
     organization := "me.chuwy",
-    scalaVersion := "2.13.5"
+    scalaVersion := "2.13.8"
   )
   .settings(BuildSettings.buildSettings)
   .settings(BuildSettings.scalifySettings)
