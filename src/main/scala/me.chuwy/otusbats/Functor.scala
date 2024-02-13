@@ -1,7 +1,7 @@
 package me.chuwy.otusbats
 
 trait Functor[F[_]] {
-  def map[A, B](fa: F[A])(f: A => B): F[B]
+  def mapFromFunctor[A, B](fa: F[A])(f: A => B): F[B]
 }
 
 object Functor {
@@ -25,7 +25,7 @@ object Functor {
   case class NeFunctor[A](a: A, counter: Int)
 
   implicit val neFunctorFunctor: Functor[NeFunctor] = new Functor[NeFunctor] {
-    def map[A, B](fa: NeFunctor[A])(f: A => B): NeFunctor[B] =
+    def mapFromFunctor[A, B](fa: NeFunctor[A])(f: A => B): NeFunctor[B] =
       NeFunctor(f(fa.a), fa.counter + 1)
   }
 
